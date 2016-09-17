@@ -1,0 +1,51 @@
+<!doctype html public>
+<html>
+<head>
+<title> Formulario de registro </title>
+<script>
+function vervalores(){
+var sAux="";
+var frm = document.getElementById("registro");
+for (i=1;i<frm.elements.length;i++)
+{ sAux += "NOMBRE: " + frm.elements[i].name + " ";
+ sAux += "VALOR: " + frm.elements[i].value + "\n" ;
+}
+alert(sAux);
+}
+</script>
+</head>
+<body>
+	<form id='registro' name='registro' onSubmit='vervalores()' enctype="multipart/form-data">
+		<label for="nombreyapellidos">Nombre y apellidos (*): </label>
+		<input type="text" id="nombreyapellidos"> <br> <br>
+		
+		<label for="correo">Direcci&oacute;n de correo (*): </label>
+		<input type="text" id="correo"> <br> <br>
+		
+		<label for="password">Password (*): </label>
+		<input type="password" id="password"> <br> <br>
+		
+		<label for="numtelefono">N&uacute;mero de tel&eacute;fono (*): </label>
+		<input type="text" id="numtelefono"> <br> <br>
+		
+		<label for="Especialidad">Especialidad(*): </label>
+		<select name="Especialidad">
+			<option>Ingenier&iacute;a de Computadores</option>
+			<option>Computaci&oacute;n</option>
+			<option>Ingenier&iacute;a del software</option>
+		</select> <br> <br>
+		
+		<label for="intereses">Tecnolog&iacute;as y herramientas en las que est&aacute; interesado: </label>
+		<br>
+		<textarea name="intereses" rows="10" cols="40">Escribe aqu&iacute; tus intereses...
+		</textarea> <br> <br>
+		
+		Selecciona la imagen: <input name="imagen" type="file" />
+		<br> <br>
+		
+		<input type="submit" value="Enviar datos">
+		<input type="reset" value="Borrar todo">
+		
+	</form>
+</body>
+</html>
