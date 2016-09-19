@@ -1,12 +1,13 @@
 <!doctype html public>
 <html>
 <head>
+<link rel="stylesheet" href="estilos/stylegreen.css" type="text/css" media="all">	
 <title> Formulario de registro </title>
 <script>
 function vervalores(){
 var sAux="";
 var frm = document.getElementById("registro");
-for (i=1;i<frm.elements.length;i++)
+for (i=0;i<frm.elements.length;i++)
 { sAux += "NOMBRE: " + frm.elements[i].name + " ";
  sAux += "VALOR: " + frm.elements[i].value + "\n" ;
 }
@@ -15,6 +16,11 @@ alert(sAux);
 </script>
 </head>
 <body>
+  <h1><b>
+         Registro
+         </b>
+      </h1>
+      <br>
 	<form id='registro' name='registro' onSubmit='vervalores()' enctype="multipart/form-data">
 		<label for="nombreyapellidos">Nombre y apellidos (*): </label>
 		<input type="text" id="nombreyapellidos"> <br> <br>
@@ -40,6 +46,7 @@ alert(sAux);
 		<textarea name="intereses" rows="10" cols="40">Escribe aqu&iacute; tus intereses...
 		</textarea> <br> <br>
 		
+		<form method="post" action="accion.php" enctype="multipart/form-data">
 		Selecciona la imagen: <input name="imagen" type="file" />
 		<br> <br>
 		
